@@ -1,0 +1,4 @@
+/* Show it's not fixed to the top */
+.rt-main-container {
+	margin-top: 75px;
+}

@@ -1,6 +1,6 @@
 package com.rivaterrace.shopchop.controller;
 
-import static com.rivaterrace.shopchop.controller.HomeController.BASE;
+import static com.rivaterrace.shopchop.controller.LoginController.BASE;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -12,13 +12,13 @@ import org.springframework.test.web.servlet.MockMvc;
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class HomeControllerTest {
+public class LoginControllerTest {
 
 	@Autowired
 	private MockMvc mockMvc;
 
 	@Test
-	public void navigateHome() throws Exception {
+	public void navigateLogin() throws Exception {
 		mockMvc.perform(get(BASE)).andExpect(status().isOk());
 	}
 }

@@ -3,7 +3,8 @@
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 
 <head>
-<title>Riva Terrace</title>
+<title layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE">Riva
+	Terrace Grocery</title>
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <meta name="viewport"
@@ -16,14 +17,14 @@
 	crossorigin="anonymous">
 
 <!--Tiny Desk Contest Resources -->
-<link th:href="@{/css/styles.css}" rel="stylesheet" />
-<script type="text/javascript" th:src="@{/js/scripts.js}"></script>
+<link th:href="@{/static/css/styles.css}" rel="stylesheet" />
+<script type="text/javascript" th:src="@{/static/js/scripts.js}"></script>
 </head>
 
 <body>
 
 	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-		<a class="navbar-brand" href="#">Navbar</a>
+		<a class="navbar-brand" href="/">Riva Terrace Grocery</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarsExampleDefault"
 			aria-controls="navbarsExampleDefault" aria-expanded="false"
@@ -33,21 +34,15 @@
 
 		<div class="collapse navbar-collapse" id="navbarsExampleDefault">
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active"><a class="nav-link" href="#">Home
-						<span class="sr-only">(current)</span>
+				<li class="nav-item"><a class="nav-link" href="/shop">Shop
 				</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-				<li class="nav-item"><a class="nav-link disabled" href="#"
-					tabindex="-1" aria-disabled="true">Disabled</a></li>
-				<li class="nav-item dropdown"><a
-					class="nav-link dropdown-toggle" href="#" id="dropdown01"
-					data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-					<div class="dropdown-menu" aria-labelledby="dropdown01">
-						<a class="dropdown-item" href="#">Action</a> <a
-							class="dropdown-item" href="#">Another action</a> <a
-							class="dropdown-item" href="#">Something else here</a>
-					</div></li>
 			</ul>
+			
+			<ul class="navbar-nav mr-2">
+				<li class="nav-item"><a class="nav-link" href="/login">Login
+				</a></li>
+			</ul>
+			
 			<form class="form-inline my-2 my-lg-0">
 				<input class="form-control mr-sm-2" type="text" placeholder="Search"
 					aria-label="Search">
@@ -56,12 +51,9 @@
 		</div>
 	</nav>
 
-	<main role="main" class="container">
+	<main role="main" class="rt-main-container container">
 
-		<section layout:fragment="content">
-			
-			
-		</section>
+		<section layout:fragment="content"></section>
 
 	</main>
 	<!-- /.container -->
