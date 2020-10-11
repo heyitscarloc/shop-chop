@@ -1,4 +1,4 @@
-package com.rivaterrace.shopchop.model;
+package com.rivaterrace.shopchop.dto;
 
 import java.io.Serializable;
 
@@ -9,7 +9,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class LoginModel implements Serializable {
+public class LoginDTO implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
